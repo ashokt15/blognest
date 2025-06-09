@@ -31,7 +31,7 @@ export default function NewEditorPage() {
 
     const content = editor.getHTML()
 
-    const res = await fetch('/api/blogs', {
+    const res = await fetch('/api/posts', {
       method: 'POST',
       body: JSON.stringify({ title, content, status }),
       headers: { 'Content-Type': 'application/json' },
