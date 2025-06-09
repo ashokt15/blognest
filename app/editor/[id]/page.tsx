@@ -19,10 +19,10 @@ import axios from 'axios'
 export default function EditPostPage() {
   const { id } = useParams()
   const router = useRouter()
-  const { data: session, status } = useSession()
+  const { status } = useSession()
 
   const [title, setTitle] = useState('')
-  const [statusText, setStatusText] = useState<'DRAFT' | 'PUBLISHED'>('DRAFT')
+  const [setStatusText] = useState<'DRAFT' | 'PUBLISHED'>('DRAFT')
   const [loading, setLoading] = useState(true)
 
   const editor = useEditor({

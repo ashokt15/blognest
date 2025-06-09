@@ -25,7 +25,7 @@ interface Post {
 }
 
 export default function DashboardPage() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const router = useRouter()
   const [posts, setPosts] = useState<Post[]>([])
 
